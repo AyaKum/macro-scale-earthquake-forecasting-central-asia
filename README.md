@@ -1,9 +1,6 @@
 # Macro-Scale Earthquake Forecasting Under Class Imbalance in Central Asia
 
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-
-> **Paper:** Kumarkhanova A., Nurtas M. — *Journal of Big Data*, Springer (2025, under review)
+> **Paper** for *Journal of Big Data*, Springer (2025, under review)
 
 ## Overview
 
@@ -13,21 +10,6 @@ on a 1°×1° spatial grid spanning 1973–2024. The pipeline addresses severe c
 initialisation, and evaluates six models: Bi-LSTM, Neuro-Fuzzy, LightGBM, CatBoost,
 LGBM-CatBoost ensemble, and LSTM-CatBoost meta-learner. Spatial consistency is assessed
 using the pyCSEP binary spatial test (Bayona et al., 2022).
-
-## Key Results (5-seed average)
-
-| Model | PR-AUC | ROC-AUC |
-|---|---|---|
-| Bi-LSTM | — ± — | — ± — |
-| Neuro-Fuzzy | — ± — | — ± — |
-| LightGBM | — ± — | — ± — |
-| CatBoost | — ± — | — ± — |
-| LGBM-CatBoost | — ± — | — ± — |
-| LSTM-CatBoost | — ± — | — ± — |
-
-*Active Shallow Crust regime: PR-AUC ≈ 0.50 · Precision@1% ≈ 0.88*
-
-> Fill in your actual values from `outputs/metrics_summary.csv` before publishing.
 
 ## Data
 
@@ -53,14 +35,7 @@ pip install -r requirements.txt
 python scripts/run_pipeline.py --config config/config.yaml
 ```
 
-Outputs are written to `outputs/`:
-
-| File | Contents |
-|---|---|
-| `metrics_summary.csv` | PR-AUC and ROC-AUC per model (mean ± std across seeds) |
-| `regime_results.csv` | Disaggregated performance by tectonic regime |
-| `spatial_test.csv` | pyCSEP δ-scores per model |
-| `*.png` | Figures |
+Outputs are written to `outputs/`.
 
 ### Changing settings
 
@@ -101,13 +76,5 @@ earthquake-forecasting-central-asia/
 
 ## Citation
 
-See `CITATION.cff`, or:
-
+Will add after publication.
 ```
-Kumarkhanova, A. & Nurtas, M. (2025). Macro-Scale Earthquake Forecasting
-Under Class Imbalance in Central Asia. Journal of Big Data. Springer.
-```
-
-## License
-
-MIT
