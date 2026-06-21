@@ -1,0 +1,55 @@
+data:
+  starttime: "1973-01-01"
+  endtime: "2025-02-28"
+  bbox:
+    min_lat: 35.174
+    max_lat: 55.429
+    min_lon: 46.494
+    max_lon: 87.363
+  min_magnitude: 3.0
+
+grid:
+  lat_range: [35.0, 56.0]
+  lon_range: [46.0, 88.0]
+  lat_step: 1.0
+  lon_step: 1.0
+
+paths:
+  emca_shapefile: "data/EMCA_seismozonesv1.0_shp/EMCA_seismozonesv1.0.shp"
+  gem_faults_url: "https://raw.githubusercontent.com/GEMScienceTools/gem-global-active-faults/master/geojson/gem_active_faults.geojson"
+  gem_faults_local: "data/gem_active_faults.geojson"
+  output_dir: "outputs/"
+
+model:
+  seeds: [42, 123, 456, 789, 1011]
+
+  bilstm:
+    hidden_size: 32
+    num_epochs: 5
+    batch_size: 2048
+    lr: 0.01
+
+  neuro_fuzzy:
+    num_membership_funcs: 3
+    num_epochs: 5
+    batch_size: 2048
+    lr: 0.01
+
+  lgbm:
+    objective: "binary"
+    learning_rate: 0.05
+    num_boost_round: 150
+
+  catboost:
+    iterations: 150
+    learning_rate: 0.05
+    depth: 6
+
+  ensemble:
+    lgbm_weight: 0.5   # CatBoost weight = 1 - lgbm_weight
+
+evaluation:
+  test_start: "2019-01-01"
+  csep_simulations: 1000
+  csep_seed: 42
+  precision_at_k: 0.01
