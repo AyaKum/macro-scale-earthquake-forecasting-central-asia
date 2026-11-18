@@ -1,6 +1,6 @@
 # Macro-Scale Earthquake Forecasting Under Class Imbalance in Central Asia
 
-> **Paper** for *Journal of Big Data*, Springer (2025, under review)
+> **Paper**: Nurtas, M., Nurakynov, S., Sakabekov, A. et al. Macro-scale earthquake forecasting under class imbalance in Central Asia. J Big Data (2026). https://doi.org/10.1186/s40537-026-01544-z
 
 ## Overview
 
@@ -76,5 +76,5 @@ earthquake-forecasting-central-asia/
 
 ## Citation
 
-Will add after publication.
+Nurtas, M., Nurakynov, S., Sakabekov, A. et al. Macro-scale earthquake forecasting under class imbalance in Central Asia. J Big Data (2026). https://doi.org/10.1186/s40537-026-01544-z
 ```
