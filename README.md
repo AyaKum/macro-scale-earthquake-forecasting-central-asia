@@ -75,6 +75,6 @@ earthquake-forecasting-central-asia/
 ```
 
 ## Citation
-
+```bash
 Nurtas, M., Nurakynov, S., Sakabekov, A. et al. Macro-scale earthquake forecasting under class imbalance in Central Asia. J Big Data (2026). https://doi.org/10.1186/s40537-026-01544-z
-```
+ ```
